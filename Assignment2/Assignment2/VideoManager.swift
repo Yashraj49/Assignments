@@ -33,7 +33,7 @@ class VideoManager : ObservableObject {
                 fatalError("Missing URL") }
             
             var urlRequest = URLRequest(url: url)
-            urlRequest.setValue("iGjxqCqAPzZ8MBY31We94dJBaAD8mOzIHIP9RhwbFFTcMduSAtiiwDXA", forHTTPHeaderField: "Authorization")
+            urlRequest.setValue("Your_API_Key", forHTTPHeaderField: "Authorization")
             
            let (data , response) = try await URLSession.shared.data(for: urlRequest)
             
